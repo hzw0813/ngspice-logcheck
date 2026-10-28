@@ -1,0 +1,31 @@
+name: Trial feedback or bug
+description: Report a first-run obstacle or incorrect log/comparison result using non-sensitive data.
+body:
+  - type: markdown
+    attributes:
+      value: Do not attach private PDKs, models, source, or unreviewed logs/reports. Use a small original or synthetic reproduction. A trial does not imply production adoption.
+  - type: input
+    id: environment
+    attributes:
+      label: Tool version, Python, OS, and simulator version (if relevant)
+    validations:
+      required: true
+  - type: textarea
+    id: result
+    attributes:
+      label: Commands, expected result, and observed result
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Optional non-sensitive minimal reproduction
+  - type: dropdown
+    id: usage
+    attributes:
+      label: Which stage are you at?
+      options:
+        - Trying recorded examples
+        - Checking my own original simulation
+        - Comparing two real runs
+        - Repeated use in an existing workflow

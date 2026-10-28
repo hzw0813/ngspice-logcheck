@@ -1,0 +1,8 @@
+RC charging measurement example with doubled resistance
+Vstep in 0 PULSE(0 1 0 1n 1n 1 2)
+R1 in out 2k
+C1 out 0 1n
+.tran 10n 10u
+.meas tran vout_final FIND v(out) AT=10u
+.meas tran rise_time TRIG v(out) VAL=0.1 RISE=1 TARG v(out) VAL=0.9 RISE=1
+.end

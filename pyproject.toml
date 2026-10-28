@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ngspice-logcheck"
+version = "0.1.0"
+description = "Check scalar ngspice log measurements against explicit limits and emit JSON or JUnit."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{name = "hzw0813"}]
+dependencies = []
+keywords = ["ngspice", "eda", "ci", "measurements", "junit"]
+
+[project.urls]
+Repository = "https://github.com/hzw0813/ngspice-logcheck"
+Issues = "https://github.com/hzw0813/ngspice-logcheck/issues"
+
+[project.scripts]
+ngspice-logcheck = "ngspice_logcheck.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

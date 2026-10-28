@@ -1,0 +1,37 @@
+Warning: can't find the initialization file spinit.
+
+Note: No compatibility mode selected!
+
+
+Circuit: rc charging measurement example with doubled resistance
+
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+
+Initial Transient Solution
+--------------------------
+
+Node                                   Voltage
+----                                   -------
+in                                           0
+out                                          0
+vstep#branch                                 0
+
+
+No. of Data Rows : 1016
+
+  Measurements for Transient Analysis
+
+vout_final          =  9.93260e-01
+rise_time           =  4.39444e-06 targ=  4.60566e-06 trig=  2.11226e-07
+
+
+Total analysis time (seconds) = 0.001098
+
+Total elapsed time (seconds) = 0.001 
+
+Total DRAM available = 16384.000 MB.
+DRAM currently available = 5834.547 MB.
+Maximum ngspice program size =    4.375 MB.
+Current ngspice program size =    4.375 MB.
+

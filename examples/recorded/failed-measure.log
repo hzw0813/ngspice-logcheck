@@ -1,0 +1,40 @@
+Warning: can't find the initialization file spinit.
+
+Note: No compatibility mode selected!
+
+
+Circuit: rc measurement with an unreachable threshold
+
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+
+Initial Transient Solution
+--------------------------
+
+Node                                   Voltage
+----                                   -------
+in                                           0
+out                                          0
+vstep#branch                                 0
+
+
+No. of Data Rows : 1016
+
+  Measurements for Transient Analysis
+
+
+Error: measure  rise_time  trig(TARG) : out of interval
+ .meas tran rise_time trig v(out) val=0.1 rise=1 targ v(out) val=2 rise=1 failed!
+
+vout_final          =  9.99955e-01
+
+
+Total analysis time (seconds) = 0.001028
+
+Total elapsed time (seconds) = 0.001 
+
+Total DRAM available = 16384.000 MB.
+DRAM currently available = 5834.547 MB.
+Maximum ngspice program size =    4.359 MB.
+Current ngspice program size =    4.359 MB.
+

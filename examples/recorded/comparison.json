@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 1,
+  "passed": false,
+  "baselinePassed": true,
+  "regressions": 1,
+  "improvements": 0,
+  "inputs": {
+    "baseline": {
+      "logSha256": "60f69a1e37055f94bd812a0442354ea439a8ac4d2978e72bd05df8eb23a0f758",
+      "specSha256": "ef0e90f146f6abae405fb0ca5d186feb5e53f3ecee8b1800ddd65bae8c85cbc1"
+    },
+    "candidate": {
+      "logSha256": "b225fcac44fd6537d0f08fb5c9132992b74f2293472143bdfbda3eccbf100f42",
+      "specSha256": "ef0e90f146f6abae405fb0ca5d186feb5e53f3ecee8b1800ddd65bae8c85cbc1"
+    }
+  },
+  "checks": [
+    {
+      "name": "vout_final",
+      "limits": {
+        "min": 0.99,
+        "max": 1.01
+      },
+      "baselineValue": 0.999955,
+      "candidateValue": 0.99326,
+      "delta": -0.0066950000000000065,
+      "relativeDelta": -0.006695301288557992,
+      "baselineStatus": "passed",
+      "candidateStatus": "passed",
+      "regressed": false,
+      "improved": false,
+      "baselineReason": "within-limits",
+      "candidateReason": "within-limits",
+      "notes": []
+    },
+    {
+      "name": "rise_time",
+      "limits": {
+        "min": 2.1e-06,
+        "max": 2.3e-06
+      },
+      "baselineValue": 2.19721e-06,
+      "candidateValue": 4.39444e-06,
+      "delta": 2.19723e-06,
+      "relativeDelta": 1.0000091024526558,
+      "baselineStatus": "passed",
+      "candidateStatus": "failed",
+      "regressed": true,
+      "improved": false,
+      "baselineReason": "within-limits",
+      "candidateReason": "above-maximum",
+      "notes": []
+    }
+  ],
+  "baselineDiagnostics": [
+    {
+      "line": 1,
+      "severity": "warning",
+      "code": "ngspice-warning"
+    }
+  ],
+  "candidateDiagnostics": [
+    {
+      "line": 1,
+      "severity": "warning",
+      "code": "ngspice-warning"
+    }
+  ],
+  "limitations": [
+    "Only requested scalar assignments and a documented subset of ngspice diagnostics are recognized; arbitrary other lines are ignored.",
+    "A passing result means the supplied text contains one finite in-range value for every requested name and no recognized error; it does not establish completed, fresh, authentic, or correct simulation.",
+    "An echoed or let-generated assignment is indistinguishable from a measurement result in plain text. No simulator banner, source provenance, run identity, units, waveform, circuit, or process exit status is verified.",
+    "Measurement names are matched case-insensitively. Duplicate assignments fail even when their numbers agree; concatenated runs and parameter sweeps require separate input logs.",
+    "Values use decimal or e/E scientific notation without SPICE scale suffixes. Optional finite numeric metadata is restricted to at/from/to/trig/targ/with; other output dialects fail for requested assignments.",
+    "Numbers are compared as Python binary64 floats; overflow and nonzero decimal underflow to zero are rejected when parsing text. Normal binary64 rounding still applies.",
+    "Warnings are reported without failing the result. Diagnostic recognition is incomplete and cannot prove that an ignored line is harmless.",
+    "Reports retain requested names, bounds, scalar values, line numbers and fixed diagnostic codes, but no raw log excerpts. Line 0 denotes an input-level diagnostic without a physical source line.",
+    "This comparison validates supplied artifact structure and recomputes outcomes; it does not authenticate artifacts, recompute input hashes, or establish simulator completion, freshness, circuit correctness, or independent provenance.",
+    "Hashes are user-controlled input identifiers. Equivalent measurement limits can have different spec-file hashes because bytes, formatting, or name casing differ.",
+    "delta is candidate minus baseline in native units; relativeDelta is delta divided by baseline as a ratio, not a percentage. Delta fields are descriptive and do not define a performance-regression threshold.",
+    "Regressed/improved count only per-measurement pass-to-fail/fail-to-pass transitions under unchanged limits. Global log errors affect overall outcomes and are reported separately from those counts.",
+    "Recognized observation failure reasons remain failures even when a retained scalar is in range. Claimed passed/status flags and numeric summary reasons are not used as outcome authority.",
+    "Null deltas mean a missing value, zero-baseline relative delta, or a binary64 arithmetic bound; fixed notes identify the reason. Raw report limitations and arbitrary source fields are not copied."
+  ]
+}

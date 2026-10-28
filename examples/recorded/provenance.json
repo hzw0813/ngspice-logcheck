@@ -1,0 +1,44 @@
+{
+  "generatedAt": "2026-10-28T01:27:52.429133+00:00",
+  "simulatorVersion": "******\n** ngspice-47 : Circuit level simulation program\n** Compiled with Sparse Direct Linear Solver\n** The U. C. Berkeley CAD Group\n** Copyright 1985-1994, Regents of the University of California.\n** Copyright 2001-2026, The ngspice team.\n** Please get your ngspice manual from https://ngspice.sourceforge.io/docs.html\n** Please file your bug-reports at http://ngspice.sourceforge.net/bugrep.html\n******\n",
+  "runs": [
+    {
+      "name": "baseline",
+      "circuit": "examples/rc.cir",
+      "circuitSha256": "0a28cc72ff60db417d0ac46a9cab59c56e9cc7794b0dce5c5392479b3e325c0c",
+      "simulatorArgs": [
+        "-n",
+        "-b",
+        "examples/rc.cir"
+      ],
+      "simulatorExitCode": 0,
+      "checkerExitCode": 0
+    },
+    {
+      "name": "candidate",
+      "circuit": "examples/rc-slower.cir",
+      "circuitSha256": "210e2b379d4c57c1f691a0401cff0b6fd60827ed38fdc3c199b9121646ef0642",
+      "simulatorArgs": [
+        "-n",
+        "-b",
+        "examples/rc-slower.cir"
+      ],
+      "simulatorExitCode": 0,
+      "checkerExitCode": 1
+    },
+    {
+      "name": "failed-measure",
+      "circuit": "examples/failed-measure.cir",
+      "circuitSha256": "d9985ccb7987408d96287e5c0f7ffb31e56d5f8e66809ed6ba375c3cbbccab37",
+      "simulatorArgs": [
+        "-n",
+        "-b",
+        "examples/failed-measure.cir"
+      ],
+      "simulatorExitCode": 0,
+      "checkerExitCode": 1
+    }
+  ],
+  "limitations": "Original passive RC examples. Inputs and hashes do not establish independent adoption or general simulator correctness.",
+  "comparisonExitCode": 1
+}

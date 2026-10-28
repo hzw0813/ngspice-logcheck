@@ -1,0 +1,7 @@
+{
+  "schemaVersion": 1,
+  "measurements": {
+    "vout_final": {"min": 0.99, "max": 1.01},
+    "rise_time": {"min": 0.0000021, "max": 0.0000023}
+  }
+}
