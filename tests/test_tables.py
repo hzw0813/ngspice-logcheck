@@ -152,7 +152,9 @@ class TableComparisonTests(unittest.TestCase):
     def test_malformed_quotes_controls_whitespace_and_label_bounds_rejected(self):
         for value in ["", " tb", "tb ", "tb\tbad", "tb\x00bad", "tb\nbad", "tb\u200bbad", "x" * 129]:
             with self.subTest(label=repr(value)), self.assertRaises(ValueError):
-                compare_tables(table(row()), table(row(test=value)), spec())
+                # Python 3.10's writer rejects NUL before the reader under test.
+                candidate = table(row()).replace("\ntb,", "\n" + value + ",", 1) if "\x00" in value else table(row(test=value))
+                compare_tables(table(row()), candidate, spec())
         for unit in ["", " V/V", "V/V ", "x" * 33, "V\nV"]:
             with self.subTest(unit=repr(unit)), self.assertRaises(ValueError):
                 compare_tables(table(row()), table(row(unit=unit)), spec())
