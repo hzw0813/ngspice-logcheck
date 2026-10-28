@@ -1,0 +1,5 @@
+test,corner,point,measurement,value,unit,status
+ota_ac,tt_27C,nominal,gain,65,dB,ok
+ota_ac,ss_85C,nominal,gain,62,dB,ok
+ota_tran,tt_27C,nominal,settling_time,2.1e-6,s,ok
+ota_tran,ss_85C,nominal,settling_time,2.8e-6,s,ok

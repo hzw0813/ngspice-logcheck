@@ -1,0 +1,9 @@
+{
+  "schemaVersion": 1,
+  "measurements": [
+    {"test": "ota_ac", "corner": "tt_27C", "point": "nominal", "measurement": "gain", "unit": "dB", "min": 60},
+    {"test": "ota_ac", "corner": "ss_85C", "point": "nominal", "measurement": "gain", "unit": "dB", "min": 60},
+    {"test": "ota_tran", "corner": "tt_27C", "point": "nominal", "measurement": "settling_time", "unit": "s", "max": 3e-6},
+    {"test": "ota_tran", "corner": "ss_85C", "point": "nominal", "measurement": "settling_time", "unit": "s", "max": 3e-6}
+  ]
+}

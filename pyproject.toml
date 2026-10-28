@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "ngspice-logcheck"
-version = "0.1.0"
-description = "Check scalar ngspice log measurements against explicit limits and emit JSON or JUnit."
+version = "0.2.0"
+description = "Offline scalar result checks and comparison reports for ngspice logs and normalized CSV tables."
 readme = "README.md"
 requires-python = ">=3.10"
 license = "MIT"
@@ -20,6 +20,7 @@ Issues = "https://github.com/hzw0813/ngspice-logcheck/issues"
 
 [project.scripts]
 ngspice-logcheck = "ngspice_logcheck.cli:main"
+simreview = "ngspice_logcheck.table_cli:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
